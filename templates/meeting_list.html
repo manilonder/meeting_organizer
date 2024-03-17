@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting List</title>
+</head>
+<body>
+    <h1>Meeting List</h1>
+    <!-- Title indicating the purpose of the page -->
+    <!-- Button to create a new meeting -->
+    <button onclick="window.location.href='/meeting/register'">Create Meeting</button>
+    <!-- List of meetings -->
+    <ul>
+        <!-- Loop through each meeting -->
+        {% for meeting in meetings %}
+            <li>
+                <!-- Display meeting details -->
+                <strong>ID:</strong> {{ meeting.id }}<br>
+                <strong>Subject:</strong> {{ meeting.subject }}<br>
+                <strong>Date:</strong> {{ meeting.date }}<br>
+                <strong>Start Time:</strong> {{ meeting.start_time }}<br>
+                <strong>End Time:</strong> {{ meeting.end_time }}<br>
+                <strong>Participants:</strong> {{ meeting.participants }}<br>
+                <!-- Links to edit or delete the meeting -->
+                <a href="/meeting/update/{{ meeting.id }}">Edit</a> | <a href="/meeting/delete/{{ meeting.id }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

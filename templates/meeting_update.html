@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Update</title>
+</head>
+<body>
+    <h1>Meeting Update</h1>
+    <!-- Form for meeting update -->
+    <form action="/meeting/update/{{ meeting_id }}" method="POST">
+        <!-- Input field for new meeting subject -->
+        <label for="new_subject">New Subject:</label><br>
+        <input type="text" id="new_subject" name="new_subject" value="{{ meeting.subject }}"><br><br>
+
+        <!-- Input field for new meeting date -->
+        <label for="new_date">New Date:</label><br>
+        <input type="date" id="new_date" name="new_date" value="{{ meeting.date }}"><br><br>
+
+        <!-- Input field for new meeting start time -->
+        <label for="new_start_time">New Start Time:</label><br>
+        <input type="time" id="new_start_time" name="new_start_time" value="{{ meeting.start_time }}"><br><br>
+
+        <!-- Input field for new meeting end time -->
+        <label for="new_end_time">New End Time:</label><br>
+        <input type="time" id="new_end_time" name="new_end_time" value="{{ meeting.end_time }}"><br><br>
+
+        <!-- Textarea field for new participants -->
+        <label for="new_participants">New Participants:</label><br>
+        <textarea id="new_participants" name="new_participants" rows="4" cols="50">{{ meeting.participants }}</textarea><br><br>
+
+        <!-- Submit button to update the meeting -->
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

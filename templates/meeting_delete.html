@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Meeting</title>
+</head>
+<body>
+    <h1>Delete Meeting</h1>
+    <!-- Title indicating the purpose of the page -->
+    <p>Are you sure you want to delete this meeting?</p>
+    <!-- Message asking for confirmation of the deletion -->
+    <!-- Display meeting details -->
+    <p>ID: {{ meeting.id }}</p>
+    <p>Subject: {{ meeting.subject }}</p>
+    <p>Date: {{ meeting.date }}</p>
+    <p>Start Time: {{ meeting.start_time }}</p>
+    <p>End Time: {{ meeting.end_time }}</p>
+    <p>Participants: {{ meeting.participants }}</p>
+    <!-- Form to confirm deletion -->
+    <form action="/meeting/delete/{{ meeting.id }}" method="POST">
+        <!-- Submit button to confirm deletion -->
+        <input type="submit" value="Yes, Delete">
+    </form>
+</body>
+</html>

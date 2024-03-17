@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Registration</title>
+</head>
+<body>
+    <h1>Meeting Registration</h1>
+    <!-- Form for meeting registration -->
+    <form action="/meeting/register" method="POST">
+        <!-- Input field for meeting subject -->
+        <label for="meeting_subject">Meeting Subject:</label><br>
+        <input type="text" id="meeting_subject" name="meeting_subject" required><br><br>
+
+        <!-- Input field for meeting date -->
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <!-- Input field for meeting start time -->
+        <label for="start_time">Start Time:</label><br>
+        <input type="time" id="start_time" name="start_time" required><br><br>
+
+        <!-- Input field for meeting end time -->
+        <label for="end_time">End Time:</label><br>
+        <input type="time" id="end_time" name="end_time" required><br><br>
+
+        <!-- Textarea field for participants -->
+        <label for="participants">Participants:</label><br>
+        <textarea id="participants" name="participants" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Submit button to submit the form -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
